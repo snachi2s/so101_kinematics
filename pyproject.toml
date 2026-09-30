@@ -1,0 +1,16 @@
+[build-system]
+requires = ["scikit-build-core>=0.10", "pybind11>=2.12"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "so101-kinematics"
+version = "0.1.0"
+description = "Forward and inverse kinematics for the LeRobot SO-101 arm (C++ core, Eigen + Sophus)"
+requires-python = ">=3.9"
+dependencies = ["numpy"]
+
+[tool.scikit-build]
+cmake.build-type = "Release"
+wheel.packages = ["python/so101_kinematics"]
+cmake.version = ">=3.18"
+sdist.exclude = ["build", "CMakeFiles", "Sophus"]

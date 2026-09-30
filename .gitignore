@@ -1,0 +1,7 @@
+build/
+CMakeFiles/
+__pycache__/
+*.egg-info/
+*.so
+.vscode/
+Sophus/
